@@ -1,0 +1,10 @@
+name: ember_w_qunit
+ui: mocha-qunit
+
+browsers:
+  - name: chrome
+    version: latest
+
+browserify:
+  - require: ./lib/index.js
+  - transform: brfs

@@ -1,9 +1,44 @@
-name: ember_w_qunit
+name: kites_challenge_v1
 ui: mocha-qunit
 
 browsers:
+  - name: ipad
+    version: 5.1..latest
+  - name: firefox
+    version: 4..latest
+  - name: iphone
+    version: 5.1..latest
+  - name: safari
+    version: 5..latest
   - name: chrome
-    version: latest
+    version: 26..latest
+  - name: internet explorer
+    version: 8..latest
+  - name: microsoftedge
+    version: 20..latest
+  - name: opera
+    version: 11..latest
+  - name: android
+    version: 4.0..latest
+
+  # - name: ipad
+  #   version: 5.1
+  # - name: firefox
+  #   version: 4
+  # - name: iphone
+  #   version: 5.1
+  # - name: safari
+  #   version: 5
+  # - name: chrome
+  #   version: 26
+  # - name: internet explorer
+  #   version: 8
+  # - name: microsoftedge
+  #   version: 20
+  # - name: opera
+  #   version: 11
+  # - name: android
+  #   version: 4.0
 
 browserify:
   - require: ./lib/index.js

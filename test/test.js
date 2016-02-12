@@ -121,4 +121,52 @@
   }
   _.each(cases, check)
 
+  /*
+  * Matt's additional tests
+  */
+
+  suite('12 hours')
+  cases = {
+    'Mon - Sun: 6:00 am - 6:00 pm': 'S0-6:0600-1800',
+    'Mon - Sun: 6:00 a.m. - 0600 p.m.': 'S0-6:0600-1800'
+  }
+  _.each(cases, check)
+
+  suite('Reverse order times')
+  cases = {
+    '9:30 a.m. - 5:00 p.m. Mon to Fri': 'S1-5:0930-1700',
+    '0400 - 0600, 1200 - 1400 Mon to Tue': 'S1-2:0400-0600,1200-1400'
+  }
+  _.each(cases, check)
+
+  suite('Random examples from the net')
+  cases = {
+    '\
+Hong Kong Central Library  \
+\
+Monday, Tuesday, Thursday, Friday,\
+Saturday & Sunday	10:00 am - 9:00 pm\
+Wednesday	1:00 pm - 9:00 pm\
+Public Holiday*	10:00 am - 7:00 pm': 'S3:1300-2100;4-2:1000-2100',
+
+'"HKEX\
+Trading Hours \
+ \
+Trading is conducted on Monday to Friday at the following times:\
+Trading Hours\
+Auction Session\
+ \
+     Pre-opening Session\
+9:00 a.m. to 9:30 a.m.\
+Continuous Trading Session\
+ \
+     Morning Session\
+9:30 a.m. to 12:00 noon\
+     Extended Morning Session\
+12:00 noon to 1:00 p.m.\
+     Afternoon Session\
+1:00 p.m. to 4:00 p.m.";': 'S1-5:0900-1600'
+  }
+  _.each(cases, check)
+
 }());
